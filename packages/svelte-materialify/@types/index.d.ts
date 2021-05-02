@@ -4,6 +4,11 @@ export { default as Jump } from './Jump';
 export { default as Ripple } from './Ripple';
 export { default as Touch } from './Touch';
 
+export { default as Stepper } from './Stepper';
+export { default as StepperHeader } from './StepperHeader';
+export { default as StepperItems } from './StepperItems';
+export { default as StepperContent } from './StepperContent';
+export { default as StepperStep } from './StepperStep';
 export { default as Alert } from './Alert';
 export { default as AppBar } from './AppBar';
 export { default as Avatar } from './Avatar';

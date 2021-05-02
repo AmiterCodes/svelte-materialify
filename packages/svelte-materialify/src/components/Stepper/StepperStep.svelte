@@ -13,8 +13,14 @@
   export let editable = false;
   export let rules = [];
   let hasError = false;
+  let error;
+  
+  $: checkRules();
 
-  const error = rules.reduce((acc, rule) => {
+
+  
+  function checkRules() {
+    error = rules.reduce((acc, rule) => {
     if (!rule) return false;
     if (rule instanceof String) return rule;
 
@@ -27,6 +33,7 @@
   }, true);
 
   hasError = error === false || error instanceof String;
+  }
 </script>
 
 <style lang="scss" src="./StepperStep.scss">

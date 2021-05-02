@@ -1,3 +1,7 @@
+<script context="module">
+  export const STEPPER = {};
+</script>
+
 <script>
   let klass = '';
   export { klass as class };
@@ -12,6 +16,23 @@
   export let vertical = false;
 
   const isBooted = false;
+
+  import { createEventDispatcher, setContext } from 'svelte';
+  import { writable } from 'svelte/store';
+
+  const dispatch = createEventDispatcher();
+  const values = writable(value);
+
+  setContext(STEPPER, {
+    values,
+    toggleStep: (index) => {
+
+    }
+  })
+
+  let steps = [];
+  let content = [];
+  setContext
 </script>
 
 <style lang="scss" src="./Stepper.scss">

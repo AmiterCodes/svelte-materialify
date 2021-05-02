@@ -9,7 +9,7 @@
 
   &.active {
     .s-stepper__label {
-      transition: 0.3s map-get($transition, 'ease-in-out');
+      transition: 0.3s map-get($transitions, 'ease-in-out');
     }
   }
 

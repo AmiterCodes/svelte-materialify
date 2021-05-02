@@ -9,7 +9,7 @@
   &.is-booted {
     .s-stepper__content,
     .s-stepper__wrapper {
-      transition: 0.3s map-get($transition, 'swing');
+      transition: 0.3s map-get($transitions, 'swing');
     }
   }
 
@@ -36,10 +36,7 @@
   &.non-linear {
     .s-stepper__step:not(.s-stepper__step.complete):not(.s-stepper__step.error) {
       .s-stepper__label {
-        color: rgba(
-          map-get($material, 'fg-color'),
-          map-get($material, 'secondary-text-percent')
-        );
+        color: var(--theme-text-secondary);
       }
     }
   }
