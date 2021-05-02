@@ -1,0 +1,41 @@
+@import './variables';
+
+.s-stepper__step {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  padding: $stepper-step-padding;
+  position: relative;
+
+  &.active {
+    .s-stepper__label {
+      transition: 0.3s map-get($transition, 'ease-in-out');
+    }
+  }
+
+  &.edtiable {
+    cursor: pointer;
+  }
+
+  &.error {
+    .s-stepper__step__step {
+      background: transparent;
+      color: inherit;
+
+      .s-icon {
+        font-size: $stepper-step-error-icon-font-size;
+        color: inherit;
+      }
+    }
+
+    .s-stepper__label {
+      color: inherit;
+      text-shadow: none;
+      font-weight: 500;
+    }
+
+    small {
+      color: inherit;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+@import './variables';
+
+.s-stepper__header {
+  .s-divider {
+    border-color: rgba(
+      map-get($material, 'fg-color'),
+      map-get($material, 'divider-percent')
+    );
+  }
+}

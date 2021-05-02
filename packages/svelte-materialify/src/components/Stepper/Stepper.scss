@@ -1,0 +1,46 @@
+@import './variables';
+
+.s-stepper {
+  border-radius: $stepper-border-radius;
+  overflow: hidden;
+  position: relative;
+  @include elevation($stepper-elevation);
+
+  &.is-booted {
+    .s-stepper__content,
+    .s-stepper__wrapper {
+      transition: 0.3s map-get($transition, 'swing');
+    }
+  }
+
+  &.vertical {
+    padding-bottom: $stepper-vertical-padding-bottom;
+
+    .s-stepper__content {
+      padding: $stepper-vertical-content-padding;
+      width: auto;
+    }
+  }
+
+  &.alt-labels {
+    .s-stepper__header {
+      height: auto;
+
+      .s-divider {
+        margin: $stepper-alt-labels-header-divider;
+        align-self: flex-start;
+      }
+    }
+  }
+
+  &.non-linear {
+    .s-stepper__step:not(.s-stepper__step.complete):not(.s-stepper__step.error) {
+      .s-stepper__label {
+        color: rgba(
+          map-get($material, 'fg-color'),
+          map-get($material, 'secondary-text-percent')
+        );
+      }
+    }
+  }
+}
